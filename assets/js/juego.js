@@ -6,12 +6,9 @@ const blackJack = (() => {
     const tipos = ['C', 'D', 'H', 'S'],
           especiales = ['A', 'J', 'Q', 'K'];
 
-
     let puntosJugadores = [];
 
-
     //Referencias html
-
     const btnPedir = document.querySelector('#btnPedir'),
           btnDetener = document.querySelector('#btnDetener'),
           btnNuevoJuego = document.querySelector('#btnNuevoJuego');
@@ -20,7 +17,6 @@ const blackJack = (() => {
            puntosHTML = document.querySelectorAll('small');
 
           
-
     const inicializarJuego = ( numJugadores = 2) => {
         deck = crearDeck();
         puntosJugadores = []; 
@@ -86,7 +82,6 @@ const blackJack = (() => {
         const [ puntosMinimos, puntosComputador] = puntosJugadores; 
 
         setTimeout(() => {
-
             if (puntosComputador === puntosMinimos) {
                 alert('Nadie gana');
             } else if (puntosMinimos > 21) {
@@ -137,7 +132,6 @@ const blackJack = (() => {
             btnPedir.disabled = true;
             btnDetener.disabled = true;
             turnoComputadora(puntosJugador);
-
         }
 
     });
